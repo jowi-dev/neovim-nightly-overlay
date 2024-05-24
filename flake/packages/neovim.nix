@@ -88,7 +88,4 @@ in
       ${oa.preConfigure}
       sed -i cmake.config/versiondef.h.in -e 's/@NVIM_VERSION_PRERELEASE@/-dev+${neovim-src.shortRev or "dirty"}/'
     '';
-
-    # libiconv is failing
-    ignoreFailure = pkgs.stdenv.isDarwin;
   })
